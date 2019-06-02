@@ -22,7 +22,8 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
   #   vb.memory = "1024"
   # end
-
   # automating configuration SHELL way
-  config.vm.provision "shell", path: "scripts/lamp.sh", privileged: false
+  # config.vm.provision "shell", path: "scripts/lamp.sh", privileged: false
+  # automating with Chef
+  config.vm.provision "chef_solo", run_list: ["lamp"]
 end

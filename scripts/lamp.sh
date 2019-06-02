@@ -3,7 +3,7 @@ sudo apt-get update
 # installing apache2 and PHP
 sudo apt-get install -y apache2 php php-mbstring php-zip phpunit unzip libapache2-mod-php
 # installing MYSQL
-# save PASSWORD in the system
+# save PASSWORD in the system -> PASSWORD SHOULD NOT BE PLACED HERE -> OK FOR DEMO ONLY
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password admin'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password admin'
 sudo apt-get install -y mysql-server
