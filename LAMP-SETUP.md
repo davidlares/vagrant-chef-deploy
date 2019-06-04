@@ -1,4 +1,4 @@
-##LAMP Stack with Vagrant
+## LAMP Stack with Vagrant
 
 #### Emulating "Homestead"
 

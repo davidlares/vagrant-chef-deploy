@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
 
   # Mapping ports
-  config.vm.network "forwarded_port", guest: 80, host: 8080
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # shared folder (mapped)
   config.vm.synced_folder ".", "/vagrant", disabled: false
@@ -25,13 +25,13 @@ Vagrant.configure("2") do |config|
   # app layer
   config.vm.define "app" do |app|
     app.vm.provision "chef_solo", run_list: ["app"]
-    app.vm.network "private_network", ip: "172.28.128.10"
+    app.vm.network "private_network", ip: "172.28.128.10" # machine internal network
   end
 
   # db layer
   config.vm.define "db" do |db|
     db.vm.provision "chef_solo", run_list: ["db"]
-    db.vm.network "private_network", ip: "172.28.128.100"
+    db.vm.network "private_network", ip: "172.28.128.100"  # machine internal network
   end
 
 end

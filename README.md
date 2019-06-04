@@ -12,6 +12,10 @@ The software is moving fast. VM's are the most effective choice for cutting the 
   - More time is needed to download, install and deploy the necessary packages
   - Team working with different OS flavors and environments
 
+## LAMP Stack
+
+  LAMP stands for Linux, Apache2, MySql and PHP. Please refer to the `LAMP-SETUP.md` for this project.
+
 ## Difference with Docker
 
   - Docker is a container-based solution for delivering apps bundled with their infrastructure. Vagrant provides it
