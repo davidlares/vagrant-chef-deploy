@@ -5,7 +5,7 @@
     - LAMP Stack + Laravel 5.x setup
     - LAMP stands for: Linux, Apache2, MySQL and PHP
 
-####[Updating Repo]
+#### [Updating Repo]
 
   `sudo apt-get update`
 
@@ -13,7 +13,7 @@
 
   `sudo apt-get install apache2 php php-mbstring php-zip phpunit unzip libapache2-mod-php`
 
-####[root user/password mysql]
+#### [root user/password mysql]
 
   `sudo apt-get install mysql-server` (with the TUI for root password)
 
@@ -22,7 +22,7 @@
   `mysql -u root -p [prompting password]`
 
 
-####Create a DATABASE and a user
+#### Create a DATABASE and a user
 
   `CREATE DATABASE laravel_project;`
 
@@ -33,7 +33,7 @@
   `FLUSH PRIVILEGES;`
 
 
-####[Laravel 5 installation + Composer]
+#### [Laravel 5 installation + Composer]
 
   `curl -Ss https://getcomposer.org/installer | php`
 
@@ -44,11 +44,11 @@
   `composer create-project --prefer-dist laravel/laravel laraproject` (on the /var/www/ directory)
 
 
-####[Laravel Permission Setup]
+#### [Laravel Permission Setup]
 
   `chmod -R 777 storage/`
 
-####[Apache2 config for serving files]
+#### [Apache2 config for serving files]
 
   `sudo vim /etc/apache2/sites-available/000-default.conf`
 
@@ -56,6 +56,6 @@
 
   `sudo apachectl restart`
 
-####[Changing .env credentials for Database]
+#### [Changing .env credentials for Database]
 
   `vim .env`
